@@ -1,0 +1,30 @@
+---
+title: "m9.com"
+subtitle: "192.168.86.178"
+logo: "logo.png"
+
+header: true
+footer: false
+
+theme: default
+links: []
+
+services:
+  - name: "Self Hosted"
+    icon: "fas fa-cloud"
+    items:
+      - name: "m9cad"
+        logo: "assets/tools/m9cad.png"
+        url: "http://192.168.86.178:3001/"
+      - name: "Pihole"
+        logo: "assets/tools/pihole.svg"
+        url: "http://192.168.86.178:805/admin/"
+      - name: "Kibana"
+        logo: "assets/tools/kibana-stockalert.png"
+        subtitle: "stockalert"
+        url: "#"
+  - name: "External"
+    items:
+      - name: "AWS Console"
+        url: "https://console.aws.amazon.com/"
+        logo: "assets/tools/aws-smile.png"
