@@ -1,5 +1,5 @@
 ---
-title: "m9.com"
+title: "homelab"
 subtitle: "192.168.86.178"
 logo: "logo.png"
 
@@ -15,7 +15,7 @@ services:
     items:
       - name: "m9cad"
         logo: "assets/tools/m9cad.png"
-        url: "http://192.168.86.178:3001/"
+        url: "http://192.168.86.232:3001/"
       - name: "Pi-hole"
         logo: "assets/tools/pihole.svg"
         url: "http://192.168.86.178:805/admin/"
