@@ -27,6 +27,9 @@ services:
         url: "#"
   - name: "External"
     items:
+      - name: "Grafana Hardware Dashboard"
+        url: "https://jaeseopark.grafana.net/d/UDvWlpHnz/hardware"
+        logo: "assets/tools/grafana-icon.svg"
       - name: "AWS Console"
         url: "https://console.aws.amazon.com/"
         logo: "assets/tools/aws-smile.png"
