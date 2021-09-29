@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  promtail:
+    container_name: promtail
+    hostname: promtail
+    image: grafana/promtail:2.3.0
+    restart: unless-stopped
+    volumes:
+      - $HOME/corganize-daemon/log:/var/log/corganized # TODO: remove after dockerizing.
+      - ./promtail:/etc/promtail
+    command: -config.file=/etc/promtail/config.yml

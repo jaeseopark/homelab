@@ -1,0 +1,18 @@
+server:
+  http_listen_address: 0.0.0.0
+  http_listen_port: 9080
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://192.168.86.232:3100/loki/api/v1/push # TODO: replace with k8s service
+
+scrape_configs:
+  - job_name: corganized
+    static_configs:
+      - targets:
+        - localhost
+        labels:
+          job: corganized
+          __path__: /var/log/corganized/*.log
