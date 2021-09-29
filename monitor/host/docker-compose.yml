@@ -11,6 +11,13 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./grafana/bootstrap:/etc/grafana
+      # - ./grafana/data:/var/lib/grafana
+    networks:
+      - loki
   loki:
     container_name: loki
     hostname: loki
