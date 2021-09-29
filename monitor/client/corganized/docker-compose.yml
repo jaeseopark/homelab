@@ -7,6 +7,6 @@ services:
     image: grafana/promtail:2.3.0
     restart: unless-stopped
     volumes:
-      - $HOME/corganize-daemon/log:/var/log/corganized
+      - $HOME/corganize-daemon/log:/var/log/corganized # TODO: remove after dockerizing.
       - ./promtail:/etc/promtail
     command: -config.file=/etc/promtail/config.yml
