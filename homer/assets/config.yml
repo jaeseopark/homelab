@@ -36,3 +36,7 @@ services:
       - name: "Github"
         url: "https://github.com/jaeseopark?tab=repositories"
         logo: "assets/tools/github.png"
+  - name: Kijiji
+    items:
+      - name: "Desktops under $200"
+        url: "https://www.kijiji.ca/b-desktop-computers/edmonton/c772l1700203?price=__200"
