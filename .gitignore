@@ -4,3 +4,4 @@ homer/assets/custom.css.sample
 homer/assets/manifest.json
 homer/assets/icons/*
 homer/assets/tools/sample*.png
+tmp/

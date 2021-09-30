@@ -16,3 +16,15 @@ scrape_configs:
         labels:
           job: corganized
           __path__: /var/log/corganized/*.log
+
+    pipeline_stages:
+      - match:
+          selector: '{job="corganized"} |= "processed"'
+          stages:
+          - regex:
+              expression: '(?P<timestamp>[\d\-: ]*) (?P<level>[a-zA-Z]+).*result=(?P<result>[a-z]*) elapsed=(?P<elapsed>[\d]*) size=(?P<size>[\d]*)'
+          - labels:
+              level:
+              result:
+              elapsed:
+              size:

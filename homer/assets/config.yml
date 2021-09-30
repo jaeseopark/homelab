@@ -25,6 +25,9 @@ services:
       - name: "Kibana"
         logo: "assets/tools/elastic-kibana.svg"
         url: "#"
+      - name: Grafana
+        url: "http://192.168.86.232:3000"
+        logo: assets/tools/grafana-icon.svg
   - name: "External"
     items:
       - name: "Grafana Hardware Dashboard"
@@ -40,3 +43,4 @@ services:
     items:
       - name: "Desktops under $200"
         url: "https://www.kijiji.ca/b-desktop-computers/edmonton/c772l1700203?price=__200"
+        logo: assets/tools/kijiji.svg
