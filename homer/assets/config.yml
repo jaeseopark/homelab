@@ -28,6 +28,9 @@ services:
       - name: Grafana
         url: "http://192.168.86.232:3000"
         logo: assets/tools/grafana-icon.svg
+      - name: Jupyter
+        url: "http://192.168.86.232:8888"
+        logo: assets/tools/jupyter.svg
   - name: "External"
     items:
       - name: "Grafana Hardware Dashboard"
