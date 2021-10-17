@@ -24,7 +24,7 @@ services:
         url: "http://192.168.86.179:80/"
       - name: "Kibana"
         logo: "assets/tools/elastic-kibana.svg"
-        url: "#"
+        url: "http://192.168.86.232:5601"
       - name: Grafana
         url: "http://192.168.86.232:3000"
         logo: assets/tools/grafana-icon.svg
