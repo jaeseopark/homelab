@@ -5,3 +5,4 @@ homer/assets/manifest.json
 homer/assets/icons/*
 homer/assets/tools/sample*.png
 tmp/
+jupyter/data/
