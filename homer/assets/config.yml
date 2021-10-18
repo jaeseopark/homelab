@@ -18,7 +18,7 @@ services:
         url: "http://192.168.86.232:3001/"
       - name: "Pi-hole"
         logo: "assets/tools/pihole.svg"
-        url: "http://192.168.86.178:805/admin/"
+        url: "http://192.168.86.232:805/admin/"
       - name: "openmediavault"
         logo: "assets/tools/openmediavault.png"
         url: "http://192.168.86.179:80/"
