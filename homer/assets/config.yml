@@ -42,8 +42,11 @@ services:
       - name: "Github"
         url: "https://github.com/jaeseopark?tab=repositories"
         logo: "assets/tools/github.png"
-  - name: Kijiji
+  - name: Used Market
     items:
       - name: "Desktops under $200"
         url: "https://www.kijiji.ca/b-desktop-computers/edmonton/c772l1700203?price=__200"
+        logo: assets/tools/kijiji.svg
+      - name: "Laptops under $200"
+        url: https://www.kijiji.ca/b-laptops/edmonton/c773l1700203?rb=true&price=__200
         logo: assets/tools/kijiji.svg
