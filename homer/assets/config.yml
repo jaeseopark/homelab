@@ -42,6 +42,9 @@ services:
       - name: "Github"
         url: "https://github.com/jaeseopark?tab=repositories"
         logo: "assets/tools/github.png"
+      - name: "A Soft Murmur"
+        url: "https://asoftmurmur.com/?m=rno30wve16wnd20fre99brd26crk12&autoplay=1"
+        logo: "assets/tools/asoftmurmur.svg"
   - name: Used Market
     items:
       - name: "Desktops under $200"
