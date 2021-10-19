@@ -1,7 +1,7 @@
 ---
-title: "homelab"
-subtitle: "192.168.86.232"
-logo: "logo.png"
+title: "m9.com"
+subtitle: "Hosted on crispbox"
+logo: "assets/img/m9cad.png"
 
 header: true
 footer: false
@@ -14,42 +14,42 @@ services:
     icon: "fas fa-cloud"
     items:
       - name: "m9cad"
-        logo: "assets/tools/m9cad.png"
-        url: "http://192.168.86.232:3001/"
+        logo: "assets/img/m9cad.png"
+        url: "http://crispbox:3001/"
       - name: "Pi-hole"
-        logo: "assets/tools/pihole.svg"
-        url: "http://192.168.86.232:805/admin/"
+        logo: "assets/img/pihole.svg"
+        url: "http://crispbox:805/admin/"
       - name: "openmediavault"
-        logo: "assets/tools/openmediavault.png"
-        url: "http://192.168.86.179:80/"
+        logo: "assets/img/omv.svg"
+        url: "http://rpiblack:80/"
       - name: "Kibana"
-        logo: "assets/tools/elastic-kibana.svg"
-        url: "http://192.168.86.232:5601"
+        logo: "assets/img/elastic-kibana.svg"
+        url: "http://crispbox:5601"
       - name: Grafana
-        url: "http://192.168.86.232:3000"
-        logo: assets/tools/grafana-icon.svg
+        url: "http://crispbox:3000"
+        logo: assets/img/grafana-icon.svg
       - name: Jupyter
-        url: "http://192.168.86.232:8888"
-        logo: assets/tools/jupyter.svg
+        url: "http://crispbox:8888"
+        logo: assets/img/jupyter.svg
   - name: "External"
     items:
       - name: "Grafana Hardware Dashboard"
         url: "https://jaeseopark.grafana.net/d/UDvWlpHnz/hardware"
-        logo: "assets/tools/grafana-icon.svg"
+        logo: "assets/img/grafana-icon.svg"
       - name: "AWS Console"
         url: "https://console.aws.amazon.com/"
-        logo: "assets/tools/aws-smile.png"
+        logo: "assets/img/aws.svg"
       - name: "Github"
         url: "https://github.com/jaeseopark?tab=repositories"
-        logo: "assets/tools/github.png"
+        logo: "assets/img/github.svg"
       - name: "A Soft Murmur"
         url: "https://asoftmurmur.com/?m=rno30wve16wnd20fre99brd26crk12&autoplay=1"
-        logo: "assets/tools/asoftmurmur.svg"
+        logo: "assets/img/asoftmurmur.svg"
   - name: Used Market
     items:
       - name: "Desktops under $200"
         url: "https://www.kijiji.ca/b-desktop-computers/edmonton/c772l1700203?price=__200"
-        logo: assets/tools/kijiji.svg
+        logo: assets/img/kijiji.svg
       - name: "Laptops under $200"
         url: https://www.kijiji.ca/b-laptops/edmonton/c773l1700203?rb=true&price=__200
-        logo: assets/tools/kijiji.svg
+        logo: assets/img/kijiji.svg

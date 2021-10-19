@@ -8,4 +8,6 @@ services:
     ports:
       - 80:8080
     volumes:
-      - ./assets:/www/assets
+      # :ro for read-only
+      - ./img:/www/assets/img:ro
+      - ./config.yml:/www/assets/config.yml:ro
