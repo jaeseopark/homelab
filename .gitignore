@@ -1,8 +1,0 @@
-homer/assets/*.dist
-homer/assets/config.yml.dist*
-homer/assets/custom.css.sample
-homer/assets/manifest.json
-homer/assets/icons/*
-homer/assets/tools/sample*.png
-tmp/
-jupyter/data/
