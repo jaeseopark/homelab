@@ -14,7 +14,7 @@ Everything in [cloud-init](../cloud-init/), plus:
     |pip| |
     |venv| |
 
-The goal is to bring parity with the Debian netinst image, so the rest of the config can be done by Ansible.
+The goal is to bring parity with the [Debian netinst image](https://www.debian.org/CD/netinst/), so the rest of the config can be done by Ansible.
 
 ### Requirements
 
