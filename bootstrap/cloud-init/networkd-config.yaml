@@ -1,0 +1,6 @@
+version: 2
+ethernets:
+  eth0:
+    nameservers:
+      search: [home, lan]
+      addresses: [94.140.14.14, 94.140.15.15] # Adguard DNS Server
