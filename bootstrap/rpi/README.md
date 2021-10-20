@@ -4,7 +4,7 @@ https://github.com/timebertt/pi-cloud-init
 
 ### Features
 
-Everything in [cloud-init](../cloud-init/README.md), plus:
+Everything in [cloud-init](../cloud-init/), plus:
 
 1. Disables built-in LED's
 1. Installs:
