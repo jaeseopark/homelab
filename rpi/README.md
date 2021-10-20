@@ -18,26 +18,11 @@ https://github.com/timebertt/pi-cloud-init
     IMG_URL=https://github.com/timebertt/pi-cloud-init/releases/download/2021-05-10/2021-05-10-raspios-buster-armhf-lite-cloud-init.zip 
     wget ${IMG_URL} && unzip *.zip
     ```
-1. Find the boot partition offset
-    ```bash
-    fdisk -l *.img
-
-    # Sample output:
-    Disk 2021-05-10-raspios-buster-armhf-lite-cloud-init.img: 1.76 GiB, 1887436800 bytes, 3686400 sectors
-    Units: sectors of 1 * 512 = 512 bytes
-    Sector size (logical/physical): 512 bytes / 512 bytes
-    I/O size (minimum/optimal): 512 bytes / 512 bytes
-    Disklabel type: dos
-    Disk identifier: 0x60ec0171
-
-    Device                                               Boot  Start     End Sectors  Size Id Type
-    2021-05-10-raspios-buster-armhf-lite-cloud-init.img1        8192  532479  524288  256M  c W95 FAT32 (LBA)
-    2021-05-10-raspios-buster-armhf-lite-cloud-init.img2      532480 3686399 3153920  1.5G 83 Linux
-    ```
-    >The FAT partition is offset by 8192 sectors, where each sector is 512 bytes => a total of 4194304 bytes.
 1. Mount the partition and copy the init files over
     ```bash
-    OFFSET=4194304 # From the previous step
+    UNIT_BYTES=512 # double check by running: /sbin/fdisk -l *.img
+    PARTITION_START=$(/sbin/fdisk -l *.img | grep FAT|awk '{print $2}')
+    OFFSET=$((PARTITION_START*UNIT_BYTES))
     sudo mkdir /mnt/tmp -p
     sudo mount -o loop,offset=${OFFSET} *.img /mnt/tmp
     cp init/* /mnt/tmp/
