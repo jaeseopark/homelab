@@ -4,16 +4,17 @@ https://github.com/timebertt/pi-cloud-init
 
 ### Features
 
+Everything in [cloud-init](../cloud-init/README.md), plus:
+
 1. Disables built-in LED's
-1. Enables SSH with predefined RSA public keys
-1. Disables password auth for SSH sessions
 1. Installs:
     |Name|Version|
     |---|---|
     |git| |
     |pip| |
     |venv| |
-    |node|14.17.6|
+
+The goal is to bring parity with the Debian netinst image, so the rest of the config can be done by Ansible.
 
 ### Requirements
 
