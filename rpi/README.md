@@ -15,10 +15,8 @@ https://github.com/timebertt/pi-cloud-init
     ```
 1. Download then unzip the image
     ```bash
-    ARCH="armhf" # either armhf or aarch64 (experimental)
-    FILENAME="2021-05-10-raspios-buster-$ARCH-lite-cloud-init.zip"
-    SOURCE_URL="https://github.com/timebertt/pi-cloud-init/releases/download/2021-05-10/${FILENAME}"
-    curl -sSL -o ${FILENAME} ${SOURCE_URL} &&  unzip -o ${FILENAME}
+    IMG_URL=https://github.com/timebertt/pi-cloud-init/releases/download/2021-05-10/2021-05-10-raspios-buster-armhf-lite-cloud-init.zip 
+    wget ${IMG_URL} && unzip *.zip
     ```
 1. Find the boot partition offset
     ```bash
@@ -48,3 +46,5 @@ https://github.com/timebertt/pi-cloud-init
     ```bash
     sudo umount /mnt/tmp
     ```
+1. Burn the image
+    TBD
