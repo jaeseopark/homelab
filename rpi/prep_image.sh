@@ -2,7 +2,7 @@
 
 IMG_URL="https://github.com/timebertt/pi-cloud-init/releases/download/2021-05-10/2021-05-10-raspios-buster-armhf-lite-cloud-init.zip "
 
-if [[ ${EUID} -ne 0 ]]; then
+if [[ "${EUID}" -ne "0" ]]; then
    echo "This script must be run as root" 
    exit 1
 fi
