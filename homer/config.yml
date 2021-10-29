@@ -13,6 +13,9 @@ services:
   - name: "Self Hosted"
     icon: "fas fa-cloud"
     items:
+      - name: Messages
+        url: "http://crispbox:3238"
+        logo: assets/img/messages.svg
       - name: "m9cad"
         logo: "assets/img/m9cad.png"
         url: "http://crispbox:3001/"
@@ -43,7 +46,7 @@ services:
         url: "https://github.com/jaeseopark?tab=repositories"
         logo: "assets/img/github.svg"
       - name: "A Soft Murmur"
-        url: "https://asoftmurmur.com/?m=rno30wve16wnd20fre99brd26crk12&autoplay=1"
+        url: https://asoftmurmur.com/?m=rno56wve28wnd20fre24brd32crk04&autoplay=1
         logo: "assets/img/asoftmurmur.svg"
   - name: Used Market
     items:
