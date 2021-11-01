@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+    imf-web:
+        container_name: imf-web
+        restart: unless-stopped
+        image: jaeseoparkdocker/imessageforwarder-web:latest
+        networks:
+            - bridge
+        ports:
+            - 3238:80
+        environment:
+            - TZ=America/Denver
+
+networks:
+    bridge:
+        driver: bridge
