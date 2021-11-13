@@ -10,8 +10,7 @@ theme: default
 links: []
 
 services:
-  - name: "Self Hosted"
-    icon: "fas fa-cloud"
+  - name: "crispbox"
     items:
       - name: Messages
         url: "http://crispbox:3238"
@@ -22,9 +21,6 @@ services:
       - name: "Pi-hole"
         logo: "assets/img/pihole.svg"
         url: "http://crispbox:805/admin/"
-      - name: "openmediavault"
-        logo: "assets/img/omv.svg"
-        url: "http://rpiblack:80/"
       - name: "Kibana"
         logo: "assets/img/elastic-kibana.svg"
         url: "http://crispbox:5601"
@@ -34,25 +30,10 @@ services:
       - name: Jupyter
         url: "http://crispbox:8888"
         logo: assets/img/jupyter.svg
-  - name: "External"
+      - name: "vnstat"
+        url: "http://crispbox:8685"
+  - name: "rpiblack"
     items:
-      - name: "Grafana Hardware Dashboard"
-        url: "https://jaeseopark.grafana.net/d/UDvWlpHnz/hardware"
-        logo: "assets/img/grafana-icon.svg"
-      - name: "AWS Console"
-        url: "https://console.aws.amazon.com/"
-        logo: "assets/img/aws.svg"
-      - name: "Github"
-        url: "https://github.com/jaeseopark?tab=repositories"
-        logo: "assets/img/github.svg"
-      - name: "A Soft Murmur"
-        url: https://asoftmurmur.com/?m=rno56wve28wnd20fre24brd32crk04&autoplay=1
-        logo: "assets/img/asoftmurmur.svg"
-  - name: Used Market
-    items:
-      - name: "Desktops under $200"
-        url: "https://www.kijiji.ca/b-desktop-computers/edmonton/c772l1700203?price=__200"
-        logo: assets/img/kijiji.svg
-      - name: "Laptops under $200"
-        url: https://www.kijiji.ca/b-laptops/edmonton/c773l1700203?rb=true&price=__200
-        logo: assets/img/kijiji.svg
+      - name: "openmediavault"
+        logo: "assets/img/omv.svg"
+        url: "http://rpiblack:80/"
