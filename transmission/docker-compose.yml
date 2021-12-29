@@ -3,7 +3,7 @@ services:
   transmission:
     build: .
     restart: unless-stopped
-    command:
+    command: ./run.sh
     ports:
       - 9091:9091
       - 51413:51413
