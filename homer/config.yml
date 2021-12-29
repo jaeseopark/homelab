@@ -30,13 +30,16 @@ services:
       - name: Jupyter
         url: "http://crispbox:8888"
         logo: assets/img/jupyter.svg
-      - name: vnstat
+      - name: vnStat
         url: "http://crispbox:8685"
   - name: "rpiblack"
     items:
       - name: openmediavault
         logo: "assets/img/omv.svg"
         url: "http://rpiblack:80/"
-      - name: jellyfin
+      - name: Jellyfin
         logo: "assets/img/jellyfin.svg"
         url: "http://rpiblack:8096"
+      - name: Transmission
+        logo: "assets/img/transmission.svg"
+        url: "http://rpiblack:9091"

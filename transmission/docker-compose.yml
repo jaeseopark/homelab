@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  transmission:
+    user: 1000:1000
+    build: .
+    restart: unless-stopped
+    command: ./run.sh
+    ports:
+      - 9091:9091
+      - 51413:51413
+    volumes:
+      - /mnt/rpiblack/transmission/to_download:/to_download
+      - /mnt/rpiblack/transmission/output:/output
+      - /mnt/rpiblack/transmission/config:/config
+    # TODO: VPN
+    # cap_add:
+    #   - NET_ADMIN
+    # net:
+    #   - foobar
+    # TODO: throttle
+    # environment:
+    #   - DOWNLOAD_RATE_LIMIT=1000000 # Gigabit
+    #   - UPLOAD_RATE_LIMIT=1000000 # Gigabit
