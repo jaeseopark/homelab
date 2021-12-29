@@ -15,13 +15,13 @@ services:
       - name: Messages
         url: "http://crispbox:3238"
         logo: assets/img/messages.svg
-      - name: "m9cad"
+      - name: m9cad
         logo: "assets/img/m9cad.png"
         url: "http://crispbox:3001/"
-      - name: "Pi-hole"
+      - name: Pi-hole
         logo: "assets/img/pihole.svg"
         url: "http://crispbox:805/admin/"
-      - name: "Kibana"
+      - name: Kibana
         logo: "assets/img/elastic-kibana.svg"
         url: "http://crispbox:5601"
       - name: Grafana
@@ -30,10 +30,13 @@ services:
       - name: Jupyter
         url: "http://crispbox:8888"
         logo: assets/img/jupyter.svg
-      - name: "vnstat"
+      - name: vnstat
         url: "http://crispbox:8685"
   - name: "rpiblack"
     items:
-      - name: "openmediavault"
+      - name: openmediavault
         logo: "assets/img/omv.svg"
         url: "http://rpiblack:80/"
+      - name: jellyfin
+        logo: "assets/img/jellyfin.svg"
+        url: "http://rpiblack:8096"
