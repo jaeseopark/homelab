@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  transmission:
+    build: .
+    restart: unless-stopped
+    command:
+    ports:
+      - 9091:9091
+      - 51413:51413
+    volumes:
+      - /data/transmission/to_download:/to_download
+      - /data/transmission/output:/output
+      - /data/transmission/config:/config
+    # TODO: VPN
+    # cap_add:
+    #   - NET_ADMIN
+    # net:
+    #   - foobar
+    # TODO: throttle
+    # environment:
+    #   - DOWNLOAD_RATE_LIMIT=1000000 # Gigabit
+    #   - UPLOAD_RATE_LIMIT=1000000 # Gigabit
