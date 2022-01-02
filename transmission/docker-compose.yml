@@ -26,6 +26,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Denver
+      - WHITELIST=*.*.*.*
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
       - ./config:/config
