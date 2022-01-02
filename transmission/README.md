@@ -13,6 +13,8 @@ sudo dpkg -i libseccomp2_2.5.3-2_armhf.deb
 
 ## wg0.conf
 
+https://www.reddit.com/r/VPNTorrents/comments/j1ap68/my_docker_setup_for_torrenting_transmission/
+
 Add the following lines to the `[Interface]` block:
 
 ```

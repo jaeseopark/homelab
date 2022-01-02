@@ -26,8 +26,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Denver
-      - WHITELIST=192.168.0.1/16
-      - HOST_WHITELIST=rpiblack,crispbox
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
       - ./config:/config
