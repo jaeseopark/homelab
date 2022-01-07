@@ -1,9 +1,5 @@
 ---
-title: "m9.com"
-subtitle: "Hosted on crispbox"
-logo: "assets/img/m9cad.png"
-
-header: true
+header: false
 footer: false
 
 theme: default
