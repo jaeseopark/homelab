@@ -14,12 +14,9 @@ https://github.com/timebertt/pi-cloud-init
     # ...
     # Image is ready: 2021-05-10-raspios-buster-armhf-lite-cloud-init.img
     ```
-1. Insert the SD card and make note of its device name
+1. Write the resulting image to an SD card
     ```bash
     sudo /sbin/fdisk -l | grep SANDISK
     # ... /dev/sdb
-    ```
-1. Write data to the SD card
-    ```bash
     dd if=*.img of=/dev/sdb
     ```
