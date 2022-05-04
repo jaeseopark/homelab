@@ -24,7 +24,7 @@ services:
         url: "http://rpiblack:9091"
       - name: Transmission
         logo: "assets/img/transmission.svg"
-        url: "http://rpiblack:9092"
+        url: "http://rpiblack:9096"
         tag: "crg"
   - name: bigboi
     items:
