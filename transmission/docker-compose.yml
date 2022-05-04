@@ -55,7 +55,7 @@ services:
     restart: unless-stopped
   transmission-crg:
     image: ghcr.io/linuxserver/transmission
-    container_name: transmission
+    container_name: transmission-crg
     environment:
       - PUID=1000
       - PGID=1000
