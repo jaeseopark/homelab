@@ -1,5 +1,5 @@
 {
-    "alt-speed-down": 50,
+    "alt-speed-down": 10000,
     "alt-speed-down-enabled": false,
     "alt-speed-up": 50,
     "alt-speed-up-enabled": false,

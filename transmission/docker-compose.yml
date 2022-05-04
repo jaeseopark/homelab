@@ -28,7 +28,7 @@ services:
       - TZ=America/Denver
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
-      - ./tconfig:/config:ro
+      - ./tconfig:/config
       - /mnt/rpiblack/transmission/downloads:/downloads
       - /mnt/rpiblack/transmission/watch:/watch
     restart: unless-stopped
@@ -62,7 +62,7 @@ services:
       - TZ=America/Denver
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
-      - ./tconfig-crg:/config:ro
+      - ./tconfig-crg:/config
       - /mnt/rpiblack/transmission/downloads-crg:/downloads
       - /mnt/rpiblack/transmission/watch-crg:/watch
     restart: unless-stopped
