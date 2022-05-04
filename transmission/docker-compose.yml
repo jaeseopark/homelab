@@ -45,7 +45,7 @@ services:
       - PGID=1000
       - TZ=America/Denver
     ports:
-      - 9091:9096/tcp
+      - 9096:9096/tcp
     volumes:
       - ./wg0.conf.crg:/config/wg0.conf:ro
       - /lib/modules:/lib/modules:ro
