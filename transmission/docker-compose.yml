@@ -12,8 +12,9 @@ services:
       - TZ=America/Denver
     ports:
       - 9091:9091/tcp
+      - 9096:9096/tcp
     volumes:
-      - ./config:/config
+      - ./wg0.conf:/config/wg0.conf
       - /lib/modules:/lib/modules
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
@@ -28,9 +29,24 @@ services:
       - TZ=America/Denver
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
-      - ./config:/config
+      - ./tconfig:/config
       - /mnt/rpiblack/transmission/downloads:/downloads
       - /mnt/rpiblack/transmission/watch:/watch
+    restart: unless-stopped
+    network_mode: "service:wireguard"
+    depends_on: [ "wireguard", ]
+  transmission-crg:
+    image: ghcr.io/linuxserver/transmission
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+      - TRANSMISSION_WEB_HOME=/combustion-release/
+    volumes:
+      - ./tconfig-crg:/config
+      - /mnt/rpiblack/transmission/downloads-crg:/downloads
+      - /mnt/rpiblack/transmission/watch-crg:/watch
     restart: unless-stopped
     network_mode: "service:wireguard"
     depends_on: [ "wireguard", ]

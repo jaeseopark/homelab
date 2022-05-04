@@ -22,6 +22,10 @@ services:
       - name: Transmission
         logo: "assets/img/transmission.svg"
         url: "http://rpiblack:9091"
+      - name: Transmission
+        logo: "assets/img/transmission.svg"
+        url: "http://rpiblack:9092"
+        tag: "crg"
   - name: bigboi
     items:
       - name: openmediavault
