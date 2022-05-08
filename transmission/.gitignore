@@ -1,6 +1,8 @@
-config/coredns/
-config/resume/
-config/stats.json
-config/templates/
-config/torrents/
-wg/
+tconfig*/coredns/
+tconfig*/resume/
+tconfig*/stats.json
+tconfig*/templates/
+tconfig*/torrents/
+tconfig*/*.dat
+config*/
+wg*.conf
