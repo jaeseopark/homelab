@@ -1,0 +1,10 @@
+transmission-mnt/coredns/
+transmission-mnt/resume/
+transmission-mnt/settings.json
+transmission-mnt/stats.json
+transmission-mnt/templates/
+transmission-mnt/torrents/
+transmission-mnt/*.dat
+wg0.conf
+docker-compose.yml
+
