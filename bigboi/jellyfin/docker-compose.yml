@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=0
+      - PGID=27
+    volumes:
+      - /srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/svc/jellyfin-mnt:/config
+      - /mnt/b8/media:/data
+    ports:
+      - 8096:8096
+    restart: unless-stopped
