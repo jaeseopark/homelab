@@ -11,18 +11,18 @@ services:
       - name: Pi-hole
         logo: "assets/img/pihole.svg"
         url: "http://crispbox:805/admin/"
-      - name: Transmission
-        logo: "assets/img/transmission.svg"
-        url: "http://rpiblack:9091"
-        tag: soon
   - name: bigboi
     items:
       - name: openmediavault
         logo: "assets/img/omv.svg"
         url: "http://bigboi:80/"
-      - name: Transmission
-        logo: "assets/img/transmission.svg"
-        url: "http://bigboi:9091"
       - name: Jellyfin
         logo: "assets/img/jellyfin.svg"
         url: "http://bigboi:8096"
+      - name: Transmission
+        logo: "assets/img/transmission.svg"
+        url: "http://bigboi:9091"
+      - name: Transmission
+        logo: "assets/img/transmission.svg"
+        url: "http://bigboi:9096"
+        tag: Jellyfin
