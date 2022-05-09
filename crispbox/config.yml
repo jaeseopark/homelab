@@ -11,6 +11,8 @@ services:
       - name: Pi-hole
         logo: "assets/img/pihole.svg"
         url: "http://crispbox:805/admin/"
+      - name: Corganize
+        url: "http://crispbox:5823/"
   - name: bigboi
     items:
       - name: openmediavault
