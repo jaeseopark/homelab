@@ -8,7 +8,7 @@ services:
       - PUID=0
       - PGID=27
     volumes:
-      - /srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/svc/jellyfin-mnt:/config
+      - ./jellyfin-mnt:/config
       - /mnt/b8/media:/data
     ports:
       - 8096:8096
