@@ -2,18 +2,18 @@ version: "3.6"
 services:
   wireguard:
     image: ghcr.io/linuxserver/wireguard
-    container_name: wireguard
+    container_name: crg-wireguard
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=27
       - TZ=America/Denver
     ports:
       - 9091:9091/tcp
     volumes:
-      - ./wg0.conf:/config/wg0.conf:ro
+      - /srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/svc/crg-transmission-mnt/wg0.conf:/config/wg0.conf:ro
       - /lib/modules:/lib/modules:ro
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
@@ -21,16 +21,16 @@ services:
     restart: unless-stopped
   transmission:
     image: ghcr.io/linuxserver/transmission
-    container_name: transmission
+    container_name: crg-transmission
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=27
       - TZ=America/Denver
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
-      - ./transmission-mnt:/config
-      - ./downloads:/downloads
-      - ./watch:/watch
+      - /srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/svc/crg-transmission-mnt:/config
+      - /srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/crg/downloads:/downloads
+      - /srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/crg/watch:/watch
     restart: unless-stopped
     network_mode: "service:wireguard"
     depends_on: [ "wireguard", ]

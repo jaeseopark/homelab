@@ -1,5 +1,4 @@
----
-version: "2.1"
+version: "3.7"
 services:
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
@@ -8,8 +7,42 @@ services:
       - PUID=0
       - PGID=27
     volumes:
-      - ./jellyfin-mnt:/config
-      - /mnt/b8/media:/data
+      - ~/svc/jellyfin-mnt/wg0.conf:/config/wg0.conf:ro
+      - /mnt/b8/media:/data:ro
     ports:
       - 8096:8096
     restart: unless-stopped
+  wireguard:
+    image: ghcr.io/linuxserver/wireguard
+    container_name: jellyfin-wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=0
+      - PGID=27
+      - TZ=America/Denver
+    ports:
+      - 9096:9096/tcp
+    volumes:
+      - ~/svc/media-transmission-mnt/wg0.conf:/config/wg0.conf:ro
+      - /lib/modules:/lib/modules:ro
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+  transmission:
+    image: ghcr.io/linuxserver/transmission
+    container_name: jellyfin-transmission
+    environment:
+      - PUID=0
+      - PGID=27
+      - TZ=America/Denver
+      - TRANSMISSION_WEB_HOME=/combustion-release/
+    volumes:
+      - ~/svc/media-transmission-mnt:/config
+      - /mnt/b8/media/downloads:/downloads
+      - /mnt/b8/media/watch:/watch
+    restart: unless-stopped
+    network_mode: "service:wireguard"
+    depends_on: [ "wireguard", ]
