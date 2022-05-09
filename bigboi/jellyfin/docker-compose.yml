@@ -8,7 +8,7 @@ services:
       - PGID=27
     volumes:
       - ~/svc/jellyfin-mnt:/config
-      - /mnt/b8/media:/data:ro
+      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media:/data:ro
     ports:
       - 8096:8096
     restart: unless-stopped
@@ -41,9 +41,9 @@ services:
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
       - ~/svc/media-transmission-mnt:/config
-      - /mnt/b8/media/media-downloads:/downloads/complete
-      - /mnt/b8/media/media-downloads-inc:/downloads/incomplete
-      - /mnt/b8/media/media-watch:/watch
+      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media/media-downloads:/downloads/complete
+      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media/media-downloads-inc:/downloads/incomplete
+      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media/media-watch:/watch
     restart: unless-stopped
     network_mode: "service:wireguard"
     depends_on: [ "wireguard", ]
