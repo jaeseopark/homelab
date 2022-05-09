@@ -7,7 +7,7 @@ services:
       - PUID=0
       - PGID=27
     volumes:
-      - ~/svc/jellyfin-mnt/wg0.conf:/config/wg0.conf:ro
+      - ~/svc/jellyfin-mnt:/config
       - /mnt/b8/media:/data:ro
     ports:
       - 8096:8096
@@ -41,8 +41,9 @@ services:
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
       - ~/svc/media-transmission-mnt:/config
-      - /mnt/b8/media/downloads:/downloads
-      - /mnt/b8/media/watch:/watch
+      - /mnt/b8/media/media-downloads:/downloads/complete
+      - /mnt/b8/media/media-downloads-inc:/downloads/incomplete
+      - /mnt/b8/media/media-watch:/watch
     restart: unless-stopped
     network_mode: "service:wireguard"
     depends_on: [ "wireguard", ]
