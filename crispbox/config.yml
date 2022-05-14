@@ -21,6 +21,9 @@ services:
       - name: Jellyfin
         logo: "assets/img/jellyfin.svg"
         url: "http://bigboi:8096"
+      - name: Navidrome
+        logo: "assets/img/navidrome.svg"
+        url: "http://bigboi:4533"
       - name: Transmission
         logo: "assets/img/transmission.svg"
         url: "http://bigboi:9091"
