@@ -12,6 +12,7 @@ services:
         logo: "assets/img/pihole.svg"
         url: "http://crispbox:805/admin/"
       - name: Corganize
+        logo: assets/img/corganize.svg
         url: "http://crispbox:5823/"
   - name: bigboi
     items:
