@@ -5,5 +5,5 @@ services:
     ports:
       - "5800:5800"
     volumes:
-      - "/srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/svc/:/config:rw"
+      - "/srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/svc/picard:/config:rw"
       - "/srv/dev-disk-by-uuid-5a0f2275-e689-459c-b6fb-cd14264bb915/backup/media/music:/storage:rw"
