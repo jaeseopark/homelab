@@ -4,11 +4,11 @@ services:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     environment:
-      - PUID=0
-      - PGID=27
+      - PUID=${DOCKER_UID}
+      - PGID=${DOCKER_GID}
     volumes:
-      - ~/svc/jellyfin-mnt:/config
-      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media:/data:ro
+      - ${JELLYFIN_CONFIG_PATH}:/config
+      - ${MEDIA_PATH}:/data:ro
     ports:
       - 8096:8096
     restart: unless-stopped
@@ -19,13 +19,13 @@ services:
       - NET_ADMIN
       - SYS_MODULE
     environment:
-      - PUID=0
-      - PGID=27
+      - PUID=${DOCKER_UID}
+      - PGID=${DOCKER_GID}
       - TZ=America/Denver
     ports:
       - 9096:9096/tcp
     volumes:
-      - ~/svc/media-transmission-mnt/wg0.conf:/config/wg0.conf:ro
+      - ${WIREGUARD_CONFIG_PATH}:/config/wg0.conf:ro
       - /lib/modules:/lib/modules:ro
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
@@ -35,15 +35,15 @@ services:
     image: ghcr.io/linuxserver/transmission
     container_name: jellyfin-transmission
     environment:
-      - PUID=0
-      - PGID=27
+      - PUID=${DOCKER_UID}
+      - PGID=${DOCKER_GID}
       - TZ=America/Denver
       - TRANSMISSION_WEB_HOME=/combustion-release/
     volumes:
-      - ~/svc/media-transmission-mnt:/config
-      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media/media-downloads:/downloads/complete
-      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media/media-downloads-inc:/downloads/incomplete
-      - /srv/dev-disk-by-uuid-e64e214f-1cc5-46b7-82f6-6ca2c87fea5e/media/media-watch:/watch
+      - ${TRANSMISSION_CONFIG_PATH}:/config
+      - ${MEDIA_DL_COMPLETE_PATH}:/downloads/complete
+      - ${MEDIA_DL_INCOMPLETE_PATH}:/downloads/incomplete
+      - ${MEDIA_WATCH_PATH}:/watch
     restart: unless-stopped
     network_mode: "service:wireguard"
     depends_on: [ "wireguard", ]
