@@ -6,31 +6,32 @@ theme: default
 links: []
 
 services:
+  - name: fatfinger
+    items:
+      - name: iMessageee
+        url: https://imessageee.fatfinger.click
+      - name: mlib
+        url: https://mlib.fatfinger.click/
   - name: "crispbox"
     items:
       - name: Pi-hole
-        logo: "assets/img/pihole.svg"
-        url: "http://crispbox:805/admin/"
+        logo: assets/img/pihole.svg
+        url: http://crispbox:805/admin
       - name: Corganize
         logo: assets/img/corganize.svg
-        url: "http://crispbox:5823/"
-      - name: mlib
-        url: "http://crispbox:4534/"
+        url: http://crispbox:5823
   - name: bigboi
     items:
       - name: openmediavault
-        logo: "assets/img/omv.svg"
-        url: "http://bigboi:80/"
+        logo: assets/img/omv.svg
+        url: http://bigboi
       - name: Jellyfin
-        logo: "assets/img/jellyfin.svg"
-        url: "http://bigboi:8096"
-      - name: Navidrome
-        logo: "assets/img/navidrome.svg"
-        url: "http://bigboi:4533"
+        logo: assets/img/jellyfin.svg
+        url: http://bigboi:8096
       - name: Transmission
-        logo: "assets/img/transmission.svg"
-        url: "http://bigboi:9091"
+        logo: assets/img/transmission.svg
+        url: http://bigboi:9091
       - name: Transmission
-        logo: "assets/img/transmission.svg"
-        url: "http://bigboi:9096"
+        logo: assets/img/transmission.svg
+        url: http://bigboi:9096
         tag: Jellyfin
